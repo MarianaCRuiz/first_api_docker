@@ -6,7 +6,7 @@ describe  'Charge Api' do
       charge_attributes = attributes_for(:charge, price: 10.0, discount: 2.0)
       result = charge_attributes[:price] * (1 - charge_attributes[:discount]/100)
 
-      post '/api/v1/purchase', params: { charge_order: charge_attributes }
+      post '/api/v1/charge', params: { charge_order: charge_attributes }
 
       parsed_body = JSON.parse(response.body)
       expect(response.status).to eq(201)
