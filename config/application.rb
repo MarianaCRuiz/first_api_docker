@@ -34,5 +34,6 @@ module ApiChargeFirst
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.domain_api = config_for(:domain_api)
   end
 end

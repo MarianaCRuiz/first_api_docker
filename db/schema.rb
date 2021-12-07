@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_12_06_182050) do
     t.decimal "price"
     t.decimal "discount"
     t.integer "client_id"
-    t.decimal "result"
+    t.decimal "final_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

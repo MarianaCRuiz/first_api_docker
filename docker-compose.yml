@@ -1,11 +1,16 @@
 version: '3'
 services:
-  rails:
+  api_rails:
     build: .
     command: rails s -b 0.0.0.0
-    container_name: api_charge_first_container
+    container_name: api_charge_container
     ports:
-      - 3100:3000
-      - 4100:4000
+      - 4000:4000
     volumes:
       - .:/opt/app
+    networks:
+      - api_network
+networks:
+  api_network:
+    name: custom_api
+    driver: bridge

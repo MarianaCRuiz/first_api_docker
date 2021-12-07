@@ -5,7 +5,7 @@ class CreateCharges < ActiveRecord::Migration[6.1]
       t.decimal :price
       t.decimal :discount
       t.integer :client_id
-      t.decimal :result
+      t.decimal :final_price
 
       t.timestamps
     end
