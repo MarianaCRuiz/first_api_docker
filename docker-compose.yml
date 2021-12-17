@@ -2,14 +2,15 @@ version: '3'
 services:
   api_rails:
     build: .
-    command: rails s -b 0.0.0.0
+    command: rails s -b 0.0.0.0 -p 4000
     container_name: api_charge_container
     ports:
       - 4000:4000
     volumes:
       - .:/opt/app
     networks:
-      - api_network
+      api_network:
+        ipv4_address: 172.21.0.4
 networks:
   api_network:
     name: custom_api
