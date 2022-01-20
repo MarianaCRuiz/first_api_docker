@@ -78,10 +78,6 @@ Rails.application.configure do
     IPAddr.new('0.0.0.0/0'), # All IPv4 addresses.
     IPAddr.new('::/0'),      # All IPv6 addresses.
     'localhost',             # The localhost reserved domain.
-    'container_1',           # Allow this to be addressed when running in containers via docker-compose.yml.
-    'rails',
-    'first_app_container_1',
-    'api_rails_container_1',
     'host.docker.internal'
   ]
 end

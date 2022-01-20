@@ -9,15 +9,8 @@ services:
     volumes:
       - .:/opt/app
     networks:
-      - api_network
       - new_api_network
-    extra_hosts:
-      - host.docker.internal:host-gateway
 networks:
-  api_network:
-    name: custom_api
-    driver: bridge
-    internal: true
   new_api_network:
     external:
       name: 'external-net'
