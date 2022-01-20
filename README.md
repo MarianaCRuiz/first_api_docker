@@ -1,6 +1,6 @@
 # README
 
-This application is to didactic purpose only. The goal is to run two applications simultaneously in two separate docker containers. This is one of the application, an api that generate charges to a bookstore, the second application.
+This application is to didactic purpose only. The goal is to run two applications simultaneously in two separate docker containers. This is one of the application, an api that generate charges to a bookstore, which is the second application.
 
 * Ruby version 3.0.3
 * Rails version ">= 6.1.4.4"
