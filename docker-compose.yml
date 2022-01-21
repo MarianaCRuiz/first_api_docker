@@ -1,16 +1,21 @@
-version: '3'
+version: "3"
 services:
-  api_rails:
+  api:
     build: .
     command: rails s -b 0.0.0.0 -p 4000
-    container_name: api_rails_container_1
-    ports:
-      - 4000:4000
+    container_name: pagamentos
     volumes:
       - .:/opt/app
+    ports:
+      - 4000:3000
+    tty: true
+    environment:
+      DOMAIN_HOST_NAME: pagamentos
+      DOMAIN_HOST_SERVICE: api
+      # DOCKER_COMPOSE_SESSION: true
     networks:
-      - new_api_network
+      - api_network
 networks:
-  new_api_network:
-    external:
-      name: 'external-net'
+  api_network:
+    name: api_charge_first_api_network
+    driver: bridge
