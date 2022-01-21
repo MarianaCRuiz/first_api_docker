@@ -3,16 +3,15 @@ services:
   api:
     build: .
     command: rails s -b 0.0.0.0 -p 4000
-    container_name: pagamentos
+    container_name: charges
     volumes:
       - .:/opt/app
     ports:
       - 4000:3000
     tty: true
     environment:
-      DOMAIN_HOST_NAME: pagamentos
+      DOMAIN_HOST_NAME: charges
       DOMAIN_HOST_SERVICE: api
-      # DOCKER_COMPOSE_SESSION: true
     networks:
       - api_network
 networks:

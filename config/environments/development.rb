@@ -76,21 +76,4 @@ Rails.application.configure do
 
   config.hosts << ENV['DOMAIN_HOST_NAME']
   config.hosts << ENV['DOMAIN_HOST_SERVICE']
-
-
-
-
-
-  # config.hosts << ENV['DOMAIN_HOST']
-  # config.hosts << ENV['DOMAIN_HOST_SERVICE']
-  # config.hosts << ENV['DOMAIN_HOST_REQUEST']
-  # config.hosts << ENV['DOMAIN_HOST_REQUEST_CONTAINER']
-
-
-  # config.hosts = [
-  #   IPAddr.new('0.0.0.0/0'), # All IPv4 addresses.
-  #   IPAddr.new('::/0'),      # All IPv6 addresses.
-  #   'localhost',             # The localhost reserved domain.
-  #   'host.docker.internal'
-  # ]
 end
